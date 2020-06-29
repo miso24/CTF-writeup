@@ -5,6 +5,7 @@
 - crypto
   - base646464
   - pseudo-key
+  - 12-shades-of-redpwn
 - misc
   - sanity-check
   - discord
