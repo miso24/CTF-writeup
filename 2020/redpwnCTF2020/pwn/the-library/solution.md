@@ -28,7 +28,7 @@ int main(void)
 }
 ```
 
-BOFの脆弱性がある。libcがわかっているためlibcのベー紙アドレスをリークさせて`system('/bin/sh')`を実行させるだけでいい
+BOFの脆弱性がある。libcがわかっているためlibcのベースアドレスをリークさせて`system('/bin/sh')`を実行させるだけでいい
 
 ```python
 # solve.py

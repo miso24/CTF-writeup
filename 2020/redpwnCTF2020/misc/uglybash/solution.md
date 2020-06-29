@@ -48,6 +48,8 @@ $ bash -x cmd.sh
 +++ ...
 +++ printf %s d
 +++ ...
++++ printf %s ''
++++ ...
 +++ printf %s m
 +++ ...
 +++ printf %s m
@@ -59,8 +61,12 @@ $ bash -x cmd.sh
 +++ printf %s '
 '
 ```
-と出力された(...は省略を表す)。これでフラグを得ることができた
+と出力された。
+
+dとmの間が空白になっているがuが入るとdummyとなり自然なので、uが入ると推測。
+
+これでフラグを得ることができた
 
 ```
-flag{us3_zsh,_dmmy}
+flag{us3_zsh,_dummy}
 ```

