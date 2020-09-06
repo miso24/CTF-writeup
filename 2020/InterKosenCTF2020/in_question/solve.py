@@ -1,0 +1,23 @@
+data = [0x0DB, 0x0E2, 0x0EB, 0x0F7, 0x0D6, 0x0ED, 0x0EB, 0x0C5, 0x0E8, 0x0A2, 0x0AB, 0x0EE, 0x0D8, 0x0C1, 0x0AE, 0x0B7, 0x0C4, 0x0C5, 0x0F1, 0x0B0, 0x0AB, 0x0C1, 0x0D0, 0x0BE, 0x0E7    , 0x0BA, 0x0D6, 0x0CE, 0x0EB, 0x9F]
+
+i = len(data) - 1
+rslt = []
+
+while i > 0:
+  if i == len(data) - 1:
+    rslt.append(0xFF ^ data[i] ^ i)
+  else:
+    for c in range(255):
+      tmp = (rslt[0] ^ c) ^ i ^ 0xff
+      if tmp == data[i]:
+        rslt.insert(0, c)
+        break
+  i -= 1
+
+for c in range(255):
+      tmp = (rslt[0] ^ c) ^ 0xff
+      if tmp == data[i]:
+        rslt.insert(0, c)
+        break
+
+print(''.join([chr(c) for c in rslt]))
