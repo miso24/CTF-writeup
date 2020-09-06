@@ -9,6 +9,8 @@ result = defaultdict(list)
 data = open('./sqli').read().rstrip()
 for d in data.split('\n'):
     n, mod = re.search(pattern, d).groups()
+    # htmlファイルを開く
+    # ※ あらかじめextractにHTTPパケットをエクスポートしている
     with open("extract/" + d) as f:
         html = f.read()
         result[int(n)].append(
